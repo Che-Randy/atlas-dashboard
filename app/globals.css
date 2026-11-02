@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/*
+  Design tokens taken from the Project Atlas Figma frames.
+  Anything declared in @theme becomes a Tailwind class:
+    --color-ink  ->  text-ink, bg-ink, border-ink
+    --font-mono  ->  font-mono
+  So components say `text-ink` instead of repeating `text-[#0b1c30]`.
+*/
+@theme {
+  /* Text */
+  --color-ink: #0b1c30; /* headings, values */
+  --color-muted: #434655; /* labels, secondary text */
+  --color-subtle: #747686; /* chart axis labels */
+
+  /* Surfaces & lines */
+  --color-page: #f0f0f0; /* app background */
+  --color-line: #e5eeff; /* card + table borders */
+  --color-tint: #eff4ff; /* table header, soft panels */
+
+  /* Brand */
+  --color-brand: #3399cc;
+  --color-brand-dark: #1c6585;
+  --color-danger: #ba1a1a;
+
+  /* Fonts (variables come from app/fonts.ts) */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-hanken: var(--font-hanken), var(--font-inter), sans-serif;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-ink);
+}
